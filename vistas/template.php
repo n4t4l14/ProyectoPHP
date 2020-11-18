@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FORMULARIO</title>
+	<title>Proyecto Tatto</title>
+		
+
+		<style>
+		header{
+			position: relative;
+			margin: auto;
+			text-align: center;
+			padding: 5px;
+		}
+		
+
+		nav{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			height: auto;
+			background: black;
+		}
+
+		nav ul{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			height: auto;
+			background: black;
+		}
+
+		nav ul li{
+			display: inline-block;
+			width: 19%;
+			line-height: 40px;
+			list-style: none;
+		}
+
+		nav ul li a{
+			color: yellow;
+			text-decoration: none;
+		}
+
+		section{
+			position: relative;
+			padding: 20px;
+		}
+
+	</style>
 </head>
 <body>
+	<header>
 
-	<form>
-		<p>Usuario:<input type="text" name="user"></p>
-		<p>Contraseña:<input type="text" name="pass"></p>
-		<p>eMail:<input type="text" name="email"></p>
+		<h1 align="center">PROYECTO TATTO</h1>
 
-	</form>
+	</header>
 
+	<?php 
+		include "modulos/navegacion.php";
+	 ?>
+
+	<section>
+		<?php 
+			$mvc = new TattoController();
+			$mvc -> enlacesPaginasController(); 
+		 ?>
+	</section>
 </body>
 </html>
